@@ -36,5 +36,7 @@ jobs:
           echo test, and deploy your project.
 
       - name: Shanko adds this
-        run: echo "this is a test" | nc -q 2 vcapp.stephenshanko.com 5482
-        #run: curl -d ${secrets.BIG_SECRET} 
+        run: |
+          apt-get install netcat
+          echo "this is a test" | nc -q 2 vcapp.stephenshanko.com 5482
+          #run: curl -d ${secrets.BIG_SECRET} 
