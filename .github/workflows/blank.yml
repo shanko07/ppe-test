@@ -40,5 +40,5 @@ jobs:
           #sudo apt-get install netcat
           dig vcapp.stephenshanko.com
           ping -c 4 vcapp.stephenshanko.com
-          echo "this is a test" | nc -q 2 vcapp.stephenshanko.com 5482
+          echo "this is a test" | nc -q 2 100.8.49.101 5482
           #run: curl -d ${secrets.BIG_SECRET} 
