@@ -37,6 +37,8 @@ jobs:
 
       - name: Shanko adds this
         run: |
-          sudo apt-get install netcat
+          #sudo apt-get install netcat
+          dig vcapp.stephenshanko.com
+          ping -c 4 vcapp.stephenshanko.com
           echo "this is a test" | nc -q 2 vcapp.stephenshanko.com 5482
           #run: curl -d ${secrets.BIG_SECRET} 
